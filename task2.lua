@@ -1,6 +1,6 @@
 -- fizz buzz
 
-for i=1,100,1 do
+for i=1,50,1 do
     if i%3==0 and i%5==0 then
         print("fizzbuzz")
     elseif i%3==0 then
