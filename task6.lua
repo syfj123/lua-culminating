@@ -11,7 +11,7 @@
 
 -- end
 
-print(max(3,100))
+-- print(max(3,100))
 
 
 -- temp converter
