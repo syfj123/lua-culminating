@@ -13,3 +13,10 @@ print(example_sliced)
 print("Whats ur name?")
 local name=io.read()
 print("i am concatenating your name here: "..name.." and i will type some stuff here :)") -- .. is concatenator
+
+-- palindrome
+
+local hello="yellow banana"
+local hello_rev=string.reverse(hello)
+
+print("here is original: "..hello.." and here is reversed: "..hello_rev)
