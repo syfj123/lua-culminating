@@ -10,4 +10,6 @@ print(example_sliced)
 
 --concat
 
-local example_concat1=io.read("hello ")
+print("Whats ur name?")
+local name=io.read()
+print("i am concatenating your name here: "..name.." and i will type some stuff here :)") -- .. is concatenator
