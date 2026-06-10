@@ -1,4 +1,4 @@
 -- task 1
-
-local name =input("put ur name here pal: \n")
+print("whats ur name: ")
+local name=io.read()
 print("hello world "..name)
