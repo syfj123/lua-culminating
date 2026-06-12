@@ -1,5 +1,6 @@
 platform={}
 player={}
+platforms={}
 
 function love.load()
     love.graphics.setBackgroundColor(0.8,0.8,0.8)
@@ -8,7 +9,7 @@ function love.load()
     platform.height=love.graphics.getHeight()
 
     platform.x=0
-    platform.y=platform.height/1.5
+    platform.y=platform.height/1.1
 
     player.x=love.graphics.getWidth()/2
 	player.y=love.graphics.getHeight()/2
@@ -17,10 +18,16 @@ function love.load()
 
     player.ground=player.y
     player.y_velocity=0
-    player.jump_height=-300
-    player.gravity=-500
+    player.jump_height=-500
+    player.gravity=-1500
 
-    player.speed=200
+    player.speed=270
+
+    platforms={
+        {x = 100, y = 500, width = 200, height = 20},
+        {x = 450, y = 400, width = 200, height = 20},
+        {x = 300, y = 200, width = 200, height = 20}
+    }
 end
 
 function love.update(dt) -- dt is delta time, this updates game 
@@ -58,5 +65,10 @@ function love.draw()
 
     love.graphics.rectangle("fill",platform.x,platform.y,platform.width,platform.height)
 
-    love.graphics.draw(player.img,player.x,player.y+12,0,0.1,0.1)
+    for _,p in ipairs(platforms) do
+        love.graphics.rectangle("fill",p.x,p.y,p.width,p.height)
+    end
+
+    love.graphics.draw(player.img,player.x+7,player.y+201,0,0.05,0.05)
 end
+ 
